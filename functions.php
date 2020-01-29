@@ -10,6 +10,7 @@ add_filter('use_block_editor_for_post', '__return_false', 10);
 // Load javascript
 function load_javascript(){
 	if ( !is_admin() ) {
+		wp_dequeue_script('jquery');
 		wp_deregister_script('jquery');
 
 
@@ -40,7 +41,7 @@ add_action('init', 'load_javascript');
 
 // Clean up some scripts
 function my_deregister_scripts(){
- wp_dequeue_script( 'wp-embed' );
+	wp_dequeue_script( 'wp-embed' );
 }
 
 add_action( 'wp_footer', 'my_deregister_scripts' );
