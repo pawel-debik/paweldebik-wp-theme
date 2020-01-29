@@ -148,6 +148,7 @@ a h2::before, h2 span::before { content:""; }
 .home .blog-image-link img { min-width: 100%; height: auto; }
 .home .date { display: block; }
 .pawel-head { justify-self: center; }
+.pawel-head::after { content: ""; display: block; background: red; width: 2px; height: 2px; position: absolute; }
 .blog-nav { clear: both; }
 .img-link img { max-width: 450px; }
 .just-blog-items { display: grid; grid-template-columns: repeat(auto-fit, minmax(390px, 1fr)); grid-column-gap: 30px; }
