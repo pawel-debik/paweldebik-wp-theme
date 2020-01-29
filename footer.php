@@ -12,16 +12,10 @@
 				</div>
 			</div>
 		<?php endif; ?>
+		<button style="opacity: 0;" class="talk">talk</button>
 	</footer>
 	<?php wp_footer(); ?>
 	<?php /*><div id="livebuild">I know my site looks broken! Why did I upload an unfinished site? <a href="http://mattkersley.com/development/screw-conventions-baby-this-is-my-site/" target="_blank">Matt Kersley</a> did it too, so I figured why not me as well.</div>*/?>
 	<?php echo get_post_image(); ?>
-	<?php /*
-	Use this to init lazyload without dependencies
-	<script>
-	    new LazyLoad();
-	</script>
-	*/
-	?>
 </body>
 </html>
