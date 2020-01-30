@@ -209,7 +209,7 @@ function getShortDescription($text, $cl=false) {
 		if (strlen($tmpTest)>$customLength) return $newText."...";
 		$newText = $tmpTest;
 	}
-	
+
 	return $text;
 }
 
@@ -278,7 +278,7 @@ function _setcookies( $buttonpress = false ){
 
 	// If there is a category, then set cookie: limit = 1; category = $cat
 	if ($cat){
-		setcookie(limit_cat, $cat, time()+3600); // <- no one stays on the site longer then an hour anyway :(
+		setcookie('limit_cat', $cat, time()+3600); // <- no one stays on the site longer then an hour anyway :(
 	}
 
 	// Remove cookie if user presses button re remove limitations
