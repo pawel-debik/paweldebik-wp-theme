@@ -41,7 +41,7 @@
 				<div class="extra-nav">
 					<a class="menu-back hidden" href="#" onclick="history.go(-1);">Back</a>
 					<?php
-						if (is_single){
+						if (is_single()){
 							if (has_next_posts){
 								next_post_link('<span class="menu-next">%link</span>', 'Next Blog>', TRUE);
 							}

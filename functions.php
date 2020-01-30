@@ -194,13 +194,12 @@ function get_my_body_class(){
 
 
 
-
 // Get Short Description
 function getShortDescription($text, $cl=false) {
 	$words = explode(" ",$text);
 	$newText = "";
+	$customLength = 350;
 
-	$customLength = SHORT_DESCRIPTION_LENGTH;
 	if($cl){
 		$customLength = $cl;
 	}
@@ -210,6 +209,7 @@ function getShortDescription($text, $cl=false) {
 		if (strlen($tmpTest)>$customLength) return $newText."...";
 		$newText = $tmpTest;
 	}
+	
 	return $text;
 }
 
