@@ -33,6 +33,8 @@ function load_javascript(){
 
 		// wp_register_script('cssrefresh', get_bloginfo('template_directory') . '/js/cssrefresh.js', array('actions'), '1.0');
 		// wp_enqueue_script('cssrefresh');
+
+		wp_enqueue_style( 'styles', get_stylesheet_directory_uri().'/styles/styles.css', array(), filemtime( get_stylesheet_directory().'/styles/styles.css' ));
 	}
 }
 
