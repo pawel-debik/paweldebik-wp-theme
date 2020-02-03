@@ -14,7 +14,7 @@
 
 <body <?php get_my_body_class(); ?> >
 	<header id="header" class="header">	
-		<div class="page-wrap">	
+		<div class="page-wrap crumbs-wrap">	
 
 			<div class="header-inner center-content crumbs">
 				<a href="/"><img class="website-logo" src="<?php echo logo_url() ?>" alt="Pawel Debik Logo" /></a>
@@ -32,7 +32,7 @@
 				<?php // endif; ?>
 			</div>
 		</div>
-		<div class="page-wrap">	
+		<div class="page-wrap nav-wrap">	
 			<nav class="header-inner center-content nav">
 				<?php // wp_nav_menu( array('menu' => 'Nav' )); ?>
 				<div class="extra-nav">

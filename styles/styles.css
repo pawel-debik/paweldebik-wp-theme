@@ -113,7 +113,7 @@ div p.large-text {
   display: grid;
   margin-bottom: 12px;
   position: relative;
-  z-index: 100; }
+  z-index: 9999; }
 
 .header.fixed {
   position: fixed;
@@ -200,7 +200,7 @@ div p.large-text {
 .nav .menu-item {
   display: inline-block;
   margin: 0 18px 0 0;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(110, 110, 110, 0.95);
   cursor: pointer; }
 
 .nav .menu-item {
@@ -244,8 +244,18 @@ div p.large-text {
   background: rgba(0, 144, 255, 0.75); }
 
 /* Scrolled menu nav bar */
-.scrolled-menu {
-  position: fixed; }
+.scrolled .header .page-wrap {
+  position: fixed;
+  z-index: 9999; }
+
+.nav-wrap {
+  top: 0; }
+
+.scrolled .nav-wrap {
+  -webkit-transform: translateY(50px);
+  transform: translateY(50px);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s; }
 
 /* * * * * * * * * * * * * * * * * * * * * * * 
 	CONTENT 

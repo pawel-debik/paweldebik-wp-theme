@@ -61,7 +61,7 @@ div p.large-text { font-size: 43px; line-height: 72px; color: var(--main-color);
 	HEADER 
 * * * * * * * * * * * * * * * * * * * * * * */
 
-.header { display: grid; margin-bottom: 12px; position: relative; z-index: 100; }
+.header { display: grid; margin-bottom: 12px; position: relative; z-index: 9999; }
 .header.fixed { position: fixed; width: 100%; top: 0; z-index: 999; }
 .header-inner { position: relative; display: grid; grid-template-columns: 45px auto auto; width: 100%; max-width: 1140px; margin: 0 auto; padding-top: 13px; }
 .header-inner h1 { display: flex; height: 40px; margin: 0; overflow: auto; font: 26px/1.2 Estedad; text-transform: uppercase; font-weight: normal; }
@@ -78,7 +78,7 @@ div p.large-text { font-size: 43px; line-height: 72px; color: var(--main-color);
 .nav ul { grid-column-start: 2; justify-self: right; }
 .nav li { box-shadow: none; }
 .nav-dash { margin: 0 10px; }
-.nav .menu-item { display: inline-block; margin: 0 18px 0 0; background: rgba(0, 0, 0, 0.55); cursor:pointer; }
+.nav .menu-item { display: inline-block; margin: 0 18px 0 0; background: rgba(110, 110, 110, 0.95); cursor:pointer; }
 .nav .menu-item { position: relative; overflow: hidden; }
 .nav .menu-item a { text-decoration: none; }
 .nav .menu-item span { display: block; padding: 10px 23px; color: white; line-height: 29px; }
@@ -94,7 +94,9 @@ div p.large-text { font-size: 43px; line-height: 72px; color: var(--main-color);
 .page-about .menu-about { background: rgba(0, 144, 255, 0.75); }
 
 /* Scrolled menu nav bar */
-.scrolled-menu { position: fixed; }
+.scrolled .header .page-wrap { position: fixed; z-index: 9999; }
+.nav-wrap { top: 0; }
+.scrolled .nav-wrap { transform:translateY(50px); transition: all 0.2s; }
 
 /* * * * * * * * * * * * * * * * * * * * * * * 
 	CONTENT 

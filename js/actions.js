@@ -54,11 +54,40 @@ function set_theme(shade){
 /* * * * * * * * * * * * * * * * * * * * * */
 const menu = document.querySelector('.responsive-menu-toggle');
 const menuButtons = document.querySelector('nav ul');
+// const menuYpos = getPosition(document.querySelector('.header'));
 
-menu.addEventListener("click", function(){ 
+menu.addEventListener("click", function(e){ 
+	e.preventDefault();
+
 	menu.classList.toggle('active') 
 	menuButtons.classList.toggle('active') 
 });
+
+// function getPosition(e) {
+// 	const elDistanceToTop = window.pageYOffset + e.getBoundingClientRect().top;
+//     return { elDistanceToTop };
+// }
+
+
+window.addEventListener('scroll', function(e) {
+	// console.log('window pageyoffset = ', window.pageYOffset);
+	
+	toggleScrolledClass(window.pageYOffset, 500);
+});
+
+
+function toggleScrolledClass(depth, scrolled = 300){
+	const menu = document.querySelector('.header .page-wrap');
+	const body = document.getElementsByTagName("body")[0];
+
+	if ( depth >= scrolled ){		
+		menu.classList.add('scrolled-menu');
+		body.classList.add('scrolled');
+	} else {
+		menu.classList.remove('scrolled-menu');
+		body.classList.remove('scrolled');
+	}
+}
 
 
 // window.addEventListener('scroll', function(ev) {
