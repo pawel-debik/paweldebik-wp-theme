@@ -12,11 +12,11 @@
 	<?php // echo get_google_analytics(); /* Do I really need analytics at this point? :s I never look at them. It's just helping google track everyone that visits my site. It slows load times for my visitors. Maybe I'll look into Matomo again, though that inferface.. yikes */ ?>
 </head>
 
-<body id="ide" <?php get_my_body_class(); ?> >
+<body <?php get_my_body_class(); ?> >
 	<header id="header" class="header">	
 		<div class="page-wrap">	
 
-			<div class="header-inner center-content">
+			<div class="header-inner center-content crumbs">
 				<a href="/"><img class="website-logo" src="<?php echo logo_url() ?>" alt="Pawel Debik Logo" /></a>
 				<h1><a class="blog-name" href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a><?php echo breadcrumbs(); ?></h1>
 				<?php // if ( is_user_logged_in() ): ?>
@@ -32,11 +32,8 @@
 				<?php // endif; ?>
 			</div>
 		</div>
-	</header>
-	
-	<div class="page-wrap">
-		<div class="center-content">
-			<nav class="nav">
+		<div class="page-wrap">	
+			<nav class="header-inner center-content nav">
 				<?php // wp_nav_menu( array('menu' => 'Nav' )); ?>
 				<div class="extra-nav">
 					<a class="menu-back hidden" href="#" onclick="history.go(-1);">Back</a>
@@ -66,3 +63,11 @@
 					</li>
 				</ul>
 			</nav>
+		</div>
+
+
+
+	</header>
+	
+	<div class="content page-wrap">
+		<div class="center-content">

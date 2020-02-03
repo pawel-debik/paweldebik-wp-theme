@@ -69,7 +69,7 @@ div p.large-text { font-size: 43px; line-height: 72px; color: var(--main-color);
 .header-inner h1 a.header-title { text-overflow: ellipsis; overflow: hidden; }
 .header-inner h1 a.cat { color:var(--main-color); font-size:26px; }
 .header-inner .header-title { text-decoration:none; color:#5f5f5f; font-family: Estedad; } /*   white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 200px;*/
-.header-inner span { font: 22px/1.2 Brygada, verdana; font-weight: bold; font-style: italic; }
+.crumbs span { font: 22px/1.2 Brygada, verdana; font-weight: bold; font-style: italic; }
 .header-theme-toggle { display: grid; grid-template-columns: auto auto; grid-column-start: 3; grid-column-gap: 10px; justify-self: right; align-items: center; }
 .header-theme-toggle .toggle-label { font: 18px/1 Estedad, verdana; font-style: normal; }
 
@@ -93,7 +93,8 @@ div p.large-text { font-size: 43px; line-height: 72px; color: var(--main-color);
 .category-portfolio .menu-portfolio,
 .page-about .menu-about { background: rgba(0, 144, 255, 0.75); }
 
-
+/* Scrolled menu nav bar */
+.scrolled-menu { position: fixed; }
 
 /* * * * * * * * * * * * * * * * * * * * * * * 
 	CONTENT 
@@ -252,7 +253,8 @@ html[xmlns] .clearfix   { display: block; }
 /* * * * * * * * * * * * * * * * * * * * * * * 
     Portfolio and home 2019 
 * * * * * * * * * * * * * * * * * * * * * * */
-.header .page-wrap { margin: 0; max-width: 100%; background-color: #fff; }
+.header .page-wrap { margin: 0; max-width: 100%; }
+.header .page-wrap:first-child { background-color: #fff; }
 .full-image-div::after { content: ""; position: absolute; width: 100%; height: 100%; background: #fafafa; opacity: 0; }
 .full-image-div::after { transition: opacity 0.2s; -webkit-transition: opacity 0.2s; }
 

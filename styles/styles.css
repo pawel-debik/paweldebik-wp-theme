@@ -160,7 +160,7 @@ div p.large-text {
   font-family: Estedad; }
 
 /*   white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 200px;*/
-.header-inner span {
+.crumbs span {
   font: 22px/1.2 Brygada, verdana;
   font-weight: bold;
   font-style: italic; }
@@ -242,6 +242,10 @@ div p.large-text {
 .category-portfolio .menu-portfolio,
 .page-about .menu-about {
   background: rgba(0, 144, 255, 0.75); }
+
+/* Scrolled menu nav bar */
+.scrolled-menu {
+  position: fixed; }
 
 /* * * * * * * * * * * * * * * * * * * * * * * 
 	CONTENT 
@@ -697,7 +701,9 @@ html[xmlns] .clearfix {
 * * * * * * * * * * * * * * * * * * * * * * */
 .header .page-wrap {
   margin: 0;
-  max-width: 100%;
+  max-width: 100%; }
+
+.header .page-wrap:first-child {
   background-color: #fff; }
 
 .full-image-div::after {
