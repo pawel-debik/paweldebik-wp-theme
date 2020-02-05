@@ -254,8 +254,8 @@ div p.large-text {
 .scrolled .nav-wrap {
   -webkit-transform: translateY(50px);
   transform: translateY(50px);
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s; }
+  -webkit-transition: top 0.2s;
+  transition: top 0.2s; }
 
 /* * * * * * * * * * * * * * * * * * * * * * * 
 	CONTENT 

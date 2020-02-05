@@ -17,8 +17,12 @@
   },
   "homepage": "https://github.com/pawel-debik/paweldebik-wp-theme#readme",
   "devDependencies": {
+    "cssnano": "^4.1.10",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
-    "gulp-sass": "^4.0.2"
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify-es": "^2.0.0"
   }
 }

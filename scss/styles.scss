@@ -44,7 +44,7 @@ body { background: white; font: 18px/2.3 "Estedad"; }
 .page-wrap .center-content { grid-column-start: 2; grid-column-end: 3; }
 .alignright, .f-right { float: right; }
 .alignleft, .f-left { float: left; }
-.f-left 	{ padding-right: 5px !important; }
+.f-left { padding-right: 5px !important; }
 .hidden { display: none; }
 
 .page-wrap h2, .page-wrap h3 { font-weight: normal; margin: 0 0 10px 0; font: 26px/1.2 Brygada; }
@@ -96,7 +96,7 @@ div p.large-text { font-size: 43px; line-height: 72px; color: var(--main-color);
 /* Scrolled menu nav bar */
 .scrolled .header .page-wrap { position: fixed; z-index: 9999; }
 .nav-wrap { top: 0; }
-.scrolled .nav-wrap { transform:translateY(50px); transition: all 0.2s; }
+.scrolled .nav-wrap { transform:translateY(50px); transition: top 0.2s; }
 
 /* * * * * * * * * * * * * * * * * * * * * * * 
 	CONTENT 

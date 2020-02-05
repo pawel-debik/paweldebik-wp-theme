@@ -7,7 +7,7 @@
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 	<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0" />
 	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico" />
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" />
+	<!-- <link rel="stylesheet" href="<?php // bloginfo('stylesheet_url'); ?>" /> -->
 	<?php wp_head(); ?>
 	<?php // echo get_google_analytics(); /* Do I really need analytics at this point? :s I never look at them. It's just helping google track everyone that visits my site. It slows load times for my visitors. Maybe I'll look into Matomo again, though that inferface.. yikes */ ?>
 </head>

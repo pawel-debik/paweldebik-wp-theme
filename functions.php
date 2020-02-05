@@ -24,12 +24,19 @@ function load_javascript(){
 		wp_enqueue_script('lazyload');
 		*/
 
-		// Lazyload without dependencies
-		wp_register_script('lazyload', get_bloginfo('template_directory') . '/js/lazyload.min.js', '', '1.0', true);
-		wp_enqueue_script('lazyload');
+// Regular files
+		// Lazyload without dependencies (is being concatenated with other js into all.js)
+		// wp_register_script('lazyload', get_bloginfo('template_directory') . '/js/lazyload.min.js', '', '1.0', true);
+		// wp_enqueue_script('lazyload');
 
-		wp_register_script('actions', get_bloginfo('template_directory') . '/js/actions.js', array('lazyload'), '1.0', true);
-		wp_enqueue_script('actions');
+		// wp_register_script('actions', get_bloginfo('template_directory') . '/js/actions.min.js', array('lazyload'), '1.0', true);
+		// wp_enqueue_script('actions');
+// Concatenated file
+		wp_register_script('all', get_bloginfo('template_directory') . '/js/all.js', array(), false, true );
+		wp_enqueue_script('all');
+
+
+
 
 		// wp_register_script('cssrefresh', get_bloginfo('template_directory') . '/js/cssrefresh.js', array('actions'), '1.0');
 		// wp_enqueue_script('cssrefresh');
