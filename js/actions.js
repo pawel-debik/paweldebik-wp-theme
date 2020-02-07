@@ -72,7 +72,7 @@ menu.addEventListener("click", function(e){
 window.addEventListener('scroll', function(e) {
 	// console.log('window pageyoffset = ', window.pageYOffset);
 	
-	toggleScrolledClass(window.pageYOffset, 500);
+	// Not quite production ready -> toggleScrolledClass(window.pageYOffset, 500);
 });
 
 
