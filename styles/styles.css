@@ -1321,18 +1321,19 @@ nav span {
 /* Masonry
 * * * * * * * * * * * * * * * * * * * * * * */
 .masonry {
-  -webkit-column-width: 390px;
-  -moz-column-width: 390px;
-  column-width: 390px;
+  -webkit-column-width: 450px;
+  -moz-column-width: 450px;
+  column-width: 450px;
   -webkit-column-gap: 1em;
   -moz-column-gap: 1em;
   column-gap: 1em;
   width: 96vw;
   margin-left: calc(50% - 48vw); }
 
-.masonry > * {
+.entry .masonry > * {
   display: inline-block;
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 1em; }
 
 /* * * * * * * * * * * * * * * * * * * * * * * 
 /* Responsive menu toggle

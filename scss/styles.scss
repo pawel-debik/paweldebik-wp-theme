@@ -455,8 +455,8 @@ nav span { transition: all 2s; }
 /* * * * * * * * * * * * * * * * * * * * * * * 
 /* Masonry
 * * * * * * * * * * * * * * * * * * * * * * */
-.masonry { column-width: 390px; column-gap: 1em; width: 96vw; margin-left: calc(50% - 48vw); }
-.masonry > * { display: inline-block; width: 100%; }
+.masonry { column-width: 450px; column-gap: 1em; width: 96vw; margin-left: calc(50% - 48vw); }
+.entry .masonry > * { display: inline-block; width: 100%; margin-bottom: 1em; }
 
 
 /* * * * * * * * * * * * * * * * * * * * * * * 
