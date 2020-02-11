@@ -1,4 +1,8 @@
 <?php _setcookies(); ?>
+<?php 
+$next = get_next_post_link('<span class="menu-next">%link</span>', 'Next Blog>', TRUE);
+$prev = previous_post_link('<span class="menu-prev">%link</span>', '< Prev', TRUE);
+ ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -39,11 +43,11 @@
 					<a class="menu-back hidden" href="#" onclick="history.go(-1);">Back</a>
 					<?php
 						if (is_single()){
-							if (has_next_posts){
-								next_post_link('<span class="menu-next">%link</span>', 'Next Blog>', TRUE);
+							if ($next){
+								echo $next;
 							}
-							if (has_previous_posts AND !has_next_posts){
-								previous_post_link('<span class="menu-prev">%link</span>', '< Prev', TRUE);
+							if ($prev AND !$next){
+								echo $prev;
 							}
 						}
 					?> 
