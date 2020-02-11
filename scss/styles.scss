@@ -452,6 +452,12 @@ nav span { transition: all 2s; }
 }
 
 
+/* * * * * * * * * * * * * * * * * * * * * * * 
+/* Masonry
+* * * * * * * * * * * * * * * * * * * * * * */
+.masonry { column-count: 4; column-gap: 1em; }
+.masonry > * { background-color: #eee; display: inline-block; margin: 0 0 1em; width: 300px; }
+
 
 /* * * * * * * * * * * * * * * * * * * * * * * 
 /* Responsive menu toggle
@@ -563,4 +569,29 @@ nav.nav ul.active { margin-top: 0; }
 @media (max-width: 540px) {
 
 }
+
+
+
+
+
+
+/* just testing */
+
+
+.entry.gallery h2{ 
+    display: none;
+}
+  
+
+
+
+
+
+
+
+
+
+
+
+
 

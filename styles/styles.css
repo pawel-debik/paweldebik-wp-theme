@@ -1318,6 +1318,23 @@ nav span {
     overflow: hidden; } }
 
 /* * * * * * * * * * * * * * * * * * * * * * * 
+/* Masonry
+* * * * * * * * * * * * * * * * * * * * * * */
+.masonry {
+  -webkit-column-count: 4;
+  -moz-column-count: 4;
+  column-count: 4;
+  -webkit-column-gap: 1em;
+  -moz-column-gap: 1em;
+  column-gap: 1em; }
+
+.masonry > * {
+  background-color: #eee;
+  display: inline-block;
+  margin: 0 0 1em;
+  width: 300px; }
+
+/* * * * * * * * * * * * * * * * * * * * * * * 
 /* Responsive menu toggle
 * * * * * * * * * * * * * * * * * * * * * * */
 .responsive-menu-toggle {
@@ -1464,3 +1481,6 @@ nav.nav ul.active {
     float: right; } }
 
 /* Old mobiles */
+/* just testing */
+.entry.gallery h2 {
+  display: none; }
