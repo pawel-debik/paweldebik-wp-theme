@@ -1327,14 +1327,12 @@ nav span {
   -webkit-column-gap: 1em;
   -moz-column-gap: 1em;
   column-gap: 1em;
-  width: 99vw;
-  margin-left: calc(50% - 49.5vw); }
+  width: 96vw;
+  margin-left: calc(50% - 48vw); }
 
 .masonry > * {
   display: inline-block;
-  margin: 1em;
-  width: 100%;
-  max-width: 600px; }
+  width: 100%; }
 
 /* * * * * * * * * * * * * * * * * * * * * * * 
 /* Responsive menu toggle
