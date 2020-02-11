@@ -1319,18 +1319,20 @@ nav span {
 
 /* * * * * * * * * * * * * * * * * * * * * * * 
 /* Masonry
+/* Add a <div class="masonry"> wrapper around images in a blog
 * * * * * * * * * * * * * * * * * * * * * * */
 .masonry {
-  -webkit-column-width: 450px;
-  -moz-column-width: 450px;
-  column-width: 450px;
+  -webkit-column-width: 480px;
+  -moz-column-width: 480px;
+  column-width: 480px;
   -webkit-column-gap: 1em;
   -moz-column-gap: 1em;
   column-gap: 1em;
   width: 96vw;
   margin-left: calc(50% - 48vw); }
 
-.entry .masonry > * {
+.entry .masonry > *,
+.entry .masonry > a * {
   display: inline-block;
   width: 100%;
   margin-bottom: 1em; }
