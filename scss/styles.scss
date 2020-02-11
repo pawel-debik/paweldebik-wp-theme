@@ -175,7 +175,7 @@ a h2::before, h2 span::before { content:""; }
 /* Portfolio & Photography */
 .photography-galleries { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); grid-row-gap: 20px; grid-column-gap: 30px; margin-bottom: 50px; }
 .subhome-item a { display: block; margin-bottom: 10px; max-height: 200px; } 
-.subhome-item img { z-index:0; width: 100%; height: 100%; }
+.subhome-item img { z-index:0; width: 100%; height: auto; }
 .subhome-item a:hover img { opacity: 0.8; }
 .subhome-item a:hover h2 span { height: 40px; }
 .subhome-item a:hover .button { right: 16px; background: rgba(255,255,255,1); color: rgba(0, 144, 255, 1); }
