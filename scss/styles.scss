@@ -455,8 +455,8 @@ nav span { transition: all 2s; }
 /* * * * * * * * * * * * * * * * * * * * * * * 
 /* Masonry
 * * * * * * * * * * * * * * * * * * * * * * */
-.masonry { column-count: 4; column-gap: 1em; }
-.masonry > * { background-color: #eee; display: inline-block; margin: 0 0 1em; width: 300px; }
+.masonry { column-count: 3; column-gap: 1em; width: 100vw; margin-left: calc(50% - 50vw); }
+.masonry > * { display: inline-block; margin: 0 0 1em; width: 100%; max-width: 600px; }
 
 
 /* * * * * * * * * * * * * * * * * * * * * * * 
@@ -569,29 +569,3 @@ nav.nav ul.active { margin-top: 0; }
 @media (max-width: 540px) {
 
 }
-
-
-
-
-
-
-/* just testing */
-
-
-.entry.gallery h2{ 
-    display: none;
-}
-  
-
-
-
-
-
-
-
-
-
-
-
-
-

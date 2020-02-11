@@ -1321,18 +1321,20 @@ nav span {
 /* Masonry
 * * * * * * * * * * * * * * * * * * * * * * */
 .masonry {
-  -webkit-column-count: 4;
-  -moz-column-count: 4;
-  column-count: 4;
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
   -webkit-column-gap: 1em;
   -moz-column-gap: 1em;
-  column-gap: 1em; }
+  column-gap: 1em;
+  width: 100vw;
+  margin-left: calc(50% - 50vw); }
 
 .masonry > * {
-  background-color: #eee;
   display: inline-block;
   margin: 0 0 1em;
-  width: 300px; }
+  width: 100%;
+  max-width: 600px; }
 
 /* * * * * * * * * * * * * * * * * * * * * * * 
 /* Responsive menu toggle
@@ -1481,6 +1483,3 @@ nav.nav ul.active {
     float: right; } }
 
 /* Old mobiles */
-/* just testing */
-.entry.gallery h2 {
-  display: none; }
