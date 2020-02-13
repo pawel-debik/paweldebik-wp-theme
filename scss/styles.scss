@@ -52,7 +52,7 @@ h1 { margin-bottom: 5px; }
 h2 { display: inline; color:white; padding: 9px 0; } 
 h3 { line-height:46px; font-size:20px; line-height:46px; }
 a { color: var(--main-color); }
-a:hover { color: #86d3ff; cursor:pointer; }
+a:hover { color: #86d3ff; cursor: pointer; }
 .large-text-wrapper { display: block; }
 div p.large-text { font-size: 43px; line-height: 72px; color: var(--main-color); font-family: Brygada; }
 
@@ -278,47 +278,12 @@ html[xmlns] .clearfix   { display: block; }
 /* * * * * * * * * * * * * * * * * * * * * * *
     Pawel Lightbox
 * * * * * * * * * * * * * * * * * * * * * * */
-
-
-
-.plightbox-bg {
-	position: fixed;
-	z-index: 9999;
-	width: 100%;
-	height: 100%;
-	text-align: center;
-	top: 0;
-	left: 0;
-	background: rgba(0,0,0,0.6);
-}
-
+.plightbox-bg {position: fixed; z-index: 9999; width: 100%; height: 100%; text-align: center; top: 0; left: 0; background: rgba(0,0,0,0.8); }
 .plightbox-img-wrap { position: relative; display: inline; }
+.plightbox-img { position: relative; max-width: 90%; max-height: 80%; margin-top: 40px; }
+.plightbox-close { position: absolute; bottom: 0; right: -20px; color: #fff; margin-top: 43px; display: block; width: 30px; line-height: 32px; padding: 0px; font-size: 35px; background-color: #333; border: solid #fff 2px; border-radius: 99px; transform: rotate(45deg); height: 30px; }
+.plightbox-close:hover { cursor: pointer; }
 
-.plightbox-img {
-    position: relative;
-	max-width: 90%;
-	max-height: 80%;
-	margin-top: 40px;
-}
-
-.plightbox-close {
-    position: absolute;
-    bottom: 0;
-    right: -20px;
-    color: #fff;
-    margin-top: 43px;
-    display: block;
-    width: 30px;
-    line-height: 32px;
-    padding: 0px;
-    font-size: 35px;
-    background-color: #333;
-    border: solid #fff 2px;
-    border-radius: 99px;
-    transform: rotate(45deg);
-    height: 30px;
-    cursor: pointer;
-}
 
 /* * * * * * * * * * * * * * * * * * * * * * *
     Light theme

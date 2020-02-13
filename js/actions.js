@@ -27,12 +27,12 @@ document.addEventListener('click', function(e){
 
 // lightbox init on click anything
 document.addEventListener('click', function(e){
-	if ( e.target.classList.contains('plightbox-close') ){
+	if ( e.target.classList.contains('plightbox-close') || e.target.classList.contains('plightbox-bg') ){
 		document.getElementsByClassName('plightbox-bg')[0].remove();
 	}
 });
 
-//  lightbox functionality
+// lightbox functionality
 function plightbox(img, src){
 	const myImage = new Image();
 

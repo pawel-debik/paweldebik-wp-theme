@@ -782,7 +782,7 @@ html[xmlns] .clearfix {
   text-align: center;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.6); }
+  background: rgba(0, 0, 0, 0.8); }
 
 .plightbox-img-wrap {
   position: relative;
@@ -810,7 +810,9 @@ html[xmlns] .clearfix {
   border-radius: 99px;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
-  height: 30px;
+  height: 30px; }
+
+.plightbox-close:hover {
   cursor: pointer; }
 
 /* * * * * * * * * * * * * * * * * * * * * * *
