@@ -276,6 +276,51 @@ html[xmlns] .clearfix   { display: block; }
 
 
 /* * * * * * * * * * * * * * * * * * * * * * *
+    Pawel Lightbox
+* * * * * * * * * * * * * * * * * * * * * * */
+
+
+
+.plightbox-bg {
+	position: fixed;
+	z-index: 9999;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.6);
+}
+
+.plightbox-img-wrap { position: relative; display: inline; }
+
+.plightbox-img {
+    position: relative;
+	max-width: 90%;
+	max-height: 80%;
+	margin-top: 40px;
+}
+
+.plightbox-close {
+    position: absolute;
+    bottom: 0;
+    right: -20px;
+    color: #fff;
+    margin-top: 43px;
+    display: block;
+    width: 30px;
+    line-height: 32px;
+    padding: 0px;
+    font-size: 35px;
+    background-color: #333;
+    border: solid #fff 2px;
+    border-radius: 99px;
+    transform: rotate(45deg);
+    height: 30px;
+    cursor: pointer;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * *
     Light theme
 * * * * * * * * * * * * * * * * * * * * * * */
 .light-theme .full-image-div::after { opacity: 1; }
@@ -457,8 +502,8 @@ nav span { transition: all 2s; }
 /* Add a <div class="masonry"> wrapper around images in a blog
 * * * * * * * * * * * * * * * * * * * * * * */
 .masonry { column-width: 480px; column-gap: 1em; width: 96vw; margin-left: calc(50% - 48vw); }
-.entry .masonry > *,
-.entry .masonry > a * { display: inline-block; width: 100%; margin-bottom: 1em; }
+.entry .masonry > * { display: inline-block; width: 100%; margin-bottom: 1em; }
+.entry .masonry > a * { display: inline-block; width: 100%; } /* this is for images in links */
 
 
 /* * * * * * * * * * * * * * * * * * * * * * * 

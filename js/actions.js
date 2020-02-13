@@ -9,6 +9,57 @@ var myLazyLoad = new LazyLoad({
 });
 
 /* * * * * * * * * * * * * * * * * * * * * */
+/* Pawel Lightbox */
+/* * * * * * * * * * * * * * * * * * * * * */
+
+// lightbox init on click anything
+document.addEventListener('click', function(e){
+	const img = e.target;
+	const link = e.target.parentElement;
+	const src = e.target.parentElement.getAttribute("href");
+
+	if ( link.classList.contains('plightbox') ){
+		e.preventDefault();
+
+		plightbox(img, src);
+	}
+});
+
+// lightbox init on click anything
+document.addEventListener('click', function(e){
+	if ( e.target.classList.contains('plightbox-close') ){
+		document.getElementsByClassName('plightbox-bg')[0].remove();
+	}
+});
+
+//  lightbox functionality
+function plightbox(img, src){
+	const myImage = new Image();
+
+	if ( img.nodeName.toLowerCase() === 'img' ){
+		const bg = document.createElement('div');
+		const wrap = document.createElement('div');
+		const img = document.createElement('img');
+		const close = document.createElement('span');
+		const closeContent= document.createTextNode('+');
+	
+		img.src = src;
+		
+		img.classList.add('plightbox-img');
+		bg.classList.add('plightbox-bg');
+		wrap.classList.add('plightbox-img-wrap');
+		close.classList.add('plightbox-close');
+
+		wrap.appendChild(img);
+		close.appendChild(closeContent);
+		wrap.appendChild(close);
+		bg.appendChild(wrap);
+
+		document.body.appendChild(bg);
+	}
+}
+
+/* * * * * * * * * * * * * * * * * * * * * */
 /* Theme stuff */
 /* * * * * * * * * * * * * * * * * * * * * */
 
