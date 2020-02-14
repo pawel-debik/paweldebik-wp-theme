@@ -1,7 +1,7 @@
 <?php _setcookies(); ?>
 <?php 
 $next = get_next_post_link('<span class="menu-next">%link</span>', 'Next Blog>', TRUE);
-$prev = previous_post_link('<span class="menu-prev">%link</span>', '< Prev', TRUE);
+$prev = get_previous_post_link('<span class="menu-prev">%link</span>', '< Prev', TRUE);
  ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
