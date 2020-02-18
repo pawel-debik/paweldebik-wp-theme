@@ -35,7 +35,7 @@
 	<?php if ( $post_tags[0]->name == 'wide' ): ?>
 		<?php $portfolio_items .= '
 		<div class="portfolio-item portfolio-image-wide-wrapper">
-			<a class="portfolio-image-wide" href="' . get_permalink() . '">
+			<a class="portfolio-image-wide interactive-image" href="' . get_permalink() . '">
 				<div>' . get_the_post_thumbnail(get_the_ID(), array( 680,680 ), array( 'class' => 'portfolio-image' )) . '</div>
 			</a>
 			<div>' . get_the_excerpt() . '</div>
@@ -46,7 +46,7 @@
 			<div id="post-' . get_the_ID(). '">
 				<div><small class="date">' . get_the_date() .'</small></div>
 				<h2><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h2>
-					<a class="blog-image-link" href="' . get_permalink() . '">
+					<a class="blog-image-link interactive-image" href="' . get_permalink() . '">
 			 			' . get_the_post_thumbnail(get_the_ID(), array( 570,300 ), array( 'class' => 'blog-image' )) . '
 					</a>
 				<p> ' . wrapLinkOnImg( $content, get_permalink() ) . '</p>
