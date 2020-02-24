@@ -124,8 +124,8 @@ a h2::before, h2 span::before { content:""; }
 .button.round { border-radius: 40px; }
 
 /* Column layout */
-.col-left  { float:left; min-width: 260px; max-width: 570px; clear: left; } /* keep an eye on clear: left. Added recently*/
-.col-right { width: 100%; float: right; clear: right; min-width: 260px; max-width: 550px; }
+.col-left,
+.col-right { display: block; }
 .category-portfolio .col-right { float: none; }
 .col-full  { width:100%; float:left; }
 .col-clear { clear:both; }
@@ -160,7 +160,7 @@ a h2::before, h2 span::before { content:""; }
 /* Entry */
 .entry {  }
 .image-shadow,
-.entry img { box-shadow: 0 0 3px #111; }
+.entry img { box-shadow: 0 0 3px #111; max-width: 100%; height: auto; } 
 .entry.portfolio img { box-shadow: none; }
 
 /* About */
@@ -326,6 +326,13 @@ a.interactive-image::before { content: "more\a →"; white-space: pre; opacity: 
 a.interactive-image:hover::before { top: 0; opacity: 1; line-height: 60px; }
 a.interactive-image::after { content: ""; position: absolute; top: 0; left: 0; display: block; width: 100%; height: 100%; background-color: rgba(0,0,0,0.1); z-index: 100; opacity: 0; transition: all 0.5s cubic-bezier(0, 1, 0.5, 1); }
 a.interactive-image:hover::after { opacity: 1; }
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * 
+	Exif
+* * * * * * * * * * * * * * * * * * * * * * */
+.exif-data { position: relative; margin-top: -40px; padding-left: 20px; color: #fff; text-decoration: none; border: none; }
 
 
 /* * * * * * * * * * * * * * * * * * * * * * * 
@@ -575,9 +582,22 @@ nav.nav ul.active { margin-top: 0; }
 
     /* portfolio */
     .entry.portfolio { columns: 1; }
+}
 
-    /* blogs */
-    .col-left { float: right; }
+// To do: redo all the max-width styles to go into the min with media query to improve performance on mobile
+@media (min-width: 768px) {
+
+/* Column layout */
+.col-left  { float:left; width: 49%; max-width: 570px; clear: left; } /* keep an eye on clear: left. Added recently*/
+.col-right { width: 48%; float: right; clear: right; max-width: 550px; }
+
+
+/*
+.entry { display: flex; flex-direction: row; flex-wrap: wrap; } 
+.entry > p,
+.col-left,
+.col-right { display: flex; flex-wrap: wrap; max-width: 570px; }
+*/
 }
 
 /* Old mobiles */

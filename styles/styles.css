@@ -320,19 +320,9 @@ a h2::before, h2 span::before {
   border-radius: 40px; }
 
 /* Column layout */
-.col-left {
-  float: left;
-  min-width: 260px;
-  max-width: 570px;
-  clear: left; }
-
-/* keep an eye on clear: left. Added recently*/
+.col-left,
 .col-right {
-  width: 100%;
-  float: right;
-  clear: right;
-  min-width: 260px;
-  max-width: 550px; }
+  display: block; }
 
 .category-portfolio .col-right {
   float: none; }
@@ -442,7 +432,9 @@ a h2::before, h2 span::before {
 /* Entry */
 .image-shadow,
 .entry img {
-  box-shadow: 0 0 3px #111; }
+  box-shadow: 0 0 3px #111;
+  max-width: 100%;
+  height: auto; }
 
 .entry.portfolio img {
   box-shadow: none; }
@@ -983,6 +975,17 @@ a.interactive-image::after {
 
 a.interactive-image:hover::after {
   opacity: 1; }
+
+/* * * * * * * * * * * * * * * * * * * * * * * 
+	Exif
+* * * * * * * * * * * * * * * * * * * * * * */
+.exif-data {
+  position: relative;
+  margin-top: -40px;
+  padding-left: 20px;
+  color: #fff;
+  text-decoration: none;
+  border: none; }
 
 /* * * * * * * * * * * * * * * * * * * * * * * 
 	Other 
@@ -1541,9 +1544,26 @@ nav.nav ul.active {
   .entry.portfolio {
     -webkit-columns: 1;
     -moz-columns: 1;
-    columns: 1; }
-  /* blogs */
+    columns: 1; } }
+
+@media (min-width: 768px) {
+  /* Column layout */
   .col-left {
-    float: right; } }
+    float: left;
+    width: 49%;
+    max-width: 570px;
+    clear: left; }
+  /* keep an eye on clear: left. Added recently*/
+  .col-right {
+    width: 48%;
+    float: right;
+    clear: right;
+    max-width: 550px; }
+  /*
+.entry { display: flex; flex-direction: row; flex-wrap: wrap; } 
+.entry > p,
+.col-left,
+.col-right { display: flex; flex-wrap: wrap; max-width: 570px; }
+*/ }
 
 /* Old mobiles */
