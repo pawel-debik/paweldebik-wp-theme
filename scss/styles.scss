@@ -332,7 +332,13 @@ a.interactive-image:hover::after { opacity: 1; }
 /* * * * * * * * * * * * * * * * * * * * * * * 
 	Exif
 * * * * * * * * * * * * * * * * * * * * * * */
-.exif-data { position: relative; margin-top: -40px; padding-left: 20px; color: #fff; text-decoration: none; border: none; }
+.entry .masonry > a .exif-container { position: relative; display: flex; margin-top: -40px; padding-left: 10px; color: #fff; text-decoration: none; border: none; }
+.exif-data { transition: color .5s cubic-bezier(0, 1, 0.5, 1); }
+.exif-data { position: relative; padding: 0 10px; margin-right: 20px; color: rgba(255, 255,255, 0); }
+.active .exif-data { color: rgba(255, 255,255, 1); }
+.exif-data::before { transition: width .5s cubic-bezier(0, 1, 0.5, 1); }
+.exif-data::before { position: absolute; display: block; content: ""; left: 0; top: 0; height: 100%; width: 0; background-color: rgba(0,0,0,0.3); }
+.active .exif-data::before { width: 100%; }
 
 
 /* * * * * * * * * * * * * * * * * * * * * * * 
@@ -477,8 +483,8 @@ nav span { transition: all 2s; }
 /* Add a <div class="masonry"> wrapper around images in a blog
 * * * * * * * * * * * * * * * * * * * * * * */
 .masonry { column-width: 480px; column-gap: 1em; width: 96vw; margin-left: calc(50% - 48vw); }
-.entry .masonry > * { display: inline-block; width: 100%; margin-bottom: 1em; }
-.entry .masonry > a * { display: block; width: 100%; } /* this is for images in links */
+.entry .masonry > * { display: block; width: 100%; margin-bottom: 1em; }
+.entry .masonry > a > * { display: block; width: 100%; } /* this is for images in links */
 
 
 /* * * * * * * * * * * * * * * * * * * * * * * 
@@ -589,7 +595,7 @@ nav.nav ul.active { margin-top: 0; }
 
 /* Column layout */
 .col-left  { float:left; width: 49%; max-width: 570px; clear: left; } /* keep an eye on clear: left. Added recently*/
-.col-right { width: 48%; float: right; clear: right; max-width: 550px; }
+.col-right { width: calc(200px + 30%); float: right; clear: right; max-width: 550px; }
 
 
 /*

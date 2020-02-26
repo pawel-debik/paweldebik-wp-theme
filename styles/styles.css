@@ -979,13 +979,45 @@ a.interactive-image:hover::after {
 /* * * * * * * * * * * * * * * * * * * * * * * 
 	Exif
 * * * * * * * * * * * * * * * * * * * * * * */
-.exif-data {
+.entry .masonry > a .exif-container {
   position: relative;
+  display: -webkit-box;
+  display: flex;
   margin-top: -40px;
-  padding-left: 20px;
+  padding-left: 10px;
   color: #fff;
   text-decoration: none;
   border: none; }
+
+.exif-data {
+  -webkit-transition: color 0.5s cubic-bezier(0, 1, 0.5, 1);
+  transition: color 0.5s cubic-bezier(0, 1, 0.5, 1); }
+
+.exif-data {
+  position: relative;
+  padding: 0 10px;
+  margin-right: 20px;
+  color: rgba(255, 255, 255, 0); }
+
+.active .exif-data {
+  color: white; }
+
+.exif-data::before {
+  -webkit-transition: width 0.5s cubic-bezier(0, 1, 0.5, 1);
+  transition: width 0.5s cubic-bezier(0, 1, 0.5, 1); }
+
+.exif-data::before {
+  position: absolute;
+  display: block;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background-color: rgba(0, 0, 0, 0.3); }
+
+.active .exif-data::before {
+  width: 100%; }
 
 /* * * * * * * * * * * * * * * * * * * * * * * 
 	Other 
@@ -1394,11 +1426,11 @@ nav span {
   margin-left: calc(50% - 48vw); }
 
 .entry .masonry > * {
-  display: inline-block;
+  display: block;
   width: 100%;
   margin-bottom: 1em; }
 
-.entry .masonry > a * {
+.entry .masonry > a > * {
   display: block;
   width: 100%; }
 
@@ -1555,7 +1587,7 @@ nav.nav ul.active {
     clear: left; }
   /* keep an eye on clear: left. Added recently*/
   .col-right {
-    width: 48%;
+    width: calc(200px + 30%);
     float: right;
     clear: right;
     max-width: 550px; }

@@ -8,6 +8,95 @@ var myLazyLoad = new LazyLoad({
     load_delay: 300 //adjust according to use case
 });
 
+
+
+/* * * * * * * * * * * * * * * * * * * * * */
+/* Get image exif data */
+/* * * * * * * * * * * * * * * * * * * * * */
+
+document.addEventListener('mouseenter', function(e){
+    if (e.target.nodeName.toLowerCase() === "a") {
+		if (e.target.childNodes[0].classList.contains('show-exif')){
+			const img_src = e.target.childNodes[0].getAttribute("src");
+
+			if (!('fetch' in window)) {
+				console.log('no exif data for you');
+				return;
+			}
+			
+			fetchExif(img_src, e.target.childNodes[0].parentElement);
+		}
+
+		e.target.classList.add('active');
+    }
+},true); // capture
+
+document.addEventListener('mouseout', function(e){
+	if (e.target.nodeName.toLowerCase() === "a") {
+		if (e.target.childNodes[0].classList.contains('show-exif')){
+			const allExifContainers = document.getElementsByClassName('exif-container');
+
+			Array.from(allExifContainers).forEach(function(item, i){
+				// item.remove();
+			});
+		}
+
+		e.target.classList.remove('active');
+	}
+});
+
+function fetchExif(img_src, e){
+	const target = wp_localize_vars.get_template_directory_uri + '/inc/exif.php';
+
+	fetch(target, {
+		headers: {'Content-Type': 'application/json'},
+		method : 'post',
+		body: JSON.stringify({'img_src': img_src})
+	}).then(function(res){
+		return res.json();
+	}).then(function(json){
+		const exif_vars =  [{data: json.Model, class: 'exif-model'}, 
+							{data: json.ExposureTime, class: 'exif-exposure'},
+							{data: json.ISOSpeedRatings, class: 'exif-iso'}];
+
+		appendExif(exif_vars, e);		
+	}).catch( function(error){
+		console.log(error);
+	});
+}
+
+function appendExif(exif_data, e){
+	
+	// if the exif data is already there, just leave it as is. Don't even bother setting variables etc.
+	if ( e.childNodes.length >= 2 ){
+		
+		//console.log(e.childNodes[1].classList);
+
+		// I don't get it. It says it can'd do contains on undefined for some reason
+		//if ( e.childNodes[1].classlist.contains('exif-container') ){
+			return;
+		//}
+	}
+
+	const exifContainer = document.createElement('div');
+
+	// After the container var has been set, go over the array of exif objects and make content nodes
+	exif_data.forEach(function(exif_item, i){
+		let exif = document.createElement('span');
+		let exifText = document.createTextNode(exif_item.data);
+
+		exif.classList.add(exif_item.class);
+		exif.classList.add('exif-data');
+
+		exifContainer.appendChild(exif);
+		exif.appendChild(exifText);
+	});
+	
+	exifContainer.classList.add('exif-container');
+	e.appendChild(exifContainer);
+}
+
+
 /* * * * * * * * * * * * * * * * * * * * * */
 /* Pawel Lightbox */
 /* * * * * * * * * * * * * * * * * * * * * */
@@ -80,7 +169,7 @@ window.onload = function(){
 	} else {
 		theme_toggle.checked = false;
 	}
-	console.log(shade);
+
 	if ( shade ){
 		set_theme(shade);
 	}
