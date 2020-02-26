@@ -35,8 +35,9 @@ function load_javascript(){
 		wp_register_script('all', get_bloginfo('template_directory') . '/js/all.js', array(), false, true );
 		wp_enqueue_script('all');
 
-
-
+		// Make a variable available in javascript (in this case, the template directory - so that fetch() in js can find the right php file that's in the template)
+		wp_localize_script('all', 'wp_localize_vars', array('get_template_directory_uri' => get_template_directory_uri(),)
+		);
 
 		// wp_register_script('cssrefresh', get_bloginfo('template_directory') . '/js/cssrefresh.js', array('actions'), '1.0');
 		// wp_enqueue_script('cssrefresh');
