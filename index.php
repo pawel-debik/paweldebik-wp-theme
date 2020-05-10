@@ -57,6 +57,8 @@
 <div class="homepage-content">
 	<div class="home-intro-header">
 		<div class="large-text-wrapper">
+		<?php if ( is_paged() ) { echo "<p>paged</p>"; } ?>
+		<?php if ( is_singular() ) { echo "<p>singular</p>"; } ?>
 			<p class="large-text">Hi, My name is Paweł. <br>I design and develop websites, and more.
 			<br>Check it out:</p>
 		</div>

@@ -1521,6 +1521,199 @@ nav.nav ul.active {
   margin-top: 0; }
 
 /* * * * * * * * * * * * * * * * * * * * * * * 
+/* TEMP STYLING UNTIL I MAKE MY OWN MASONRY CLONE
+* * * * * * * * * * * * * * * * * * * * * * */
+.portfolio_lots-of-images img {
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s; }
+
+@media (min-width: 768px) {
+  .portfolio_lots-of-images {
+    min-height: 4400px; }
+  .portfolio_lots-of-images .wp-image-3333 {
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 363px; }
+  .portfolio_lots-of-images .wp-image-3335 {
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    left: 393px;
+    width: 100%;
+    max-width: 317px; }
+  .portfolio_lots-of-images .wp-image-3337 {
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 827px;
+    left: 0;
+    width: 100%;
+    max-width: 710px; }
+  .portfolio_lots-of-images .wp-image-3343 {
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 535px;
+    left: 0;
+    width: 100%;
+    max-width: 400px; }
+  .portfolio_lots-of-images .wp-image-3339 {
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 456px;
+    left: 422px;
+    width: 100%;
+    max-width: 288px; }
+  .portfolio_lots-of-images .wp-image-3361 {
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 2170px;
+    left: 324px;
+    width: 100%;
+    max-width: 384px; }
+  .portfolio_lots-of-images .wp-image-3345 {
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 1320px;
+    left: 0;
+    width: 100%;
+    max-width: 710px; }
+  .portfolio_lots-of-images .wp-image-3347 {
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 1936px;
+    left: 324px;
+    width: 100%;
+    max-width: 382px; }
+  .portfolio_lots-of-images .wp-image-3349 {
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 1935px;
+    left: 0;
+    width: 100%;
+    max-width: 297px; }
+  .portfolio_lots-of-images .wp-image-3351 {
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 2830px;
+    left: 0;
+    width: 100%;
+    max-width: 710px; }
+  .portfolio_lots-of-images .wp-image-3353 {
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 3000px;
+    left: 0; }
+  .portfolio_lots-of-images .wp-image-3355 {
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 3819px;
+    left: 0;
+    width: 100%;
+    max-width: 710px; }
+  .portfolio_lots-of-images .wp-image-3357 {
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 3325px;
+    left: 0;
+    width: 100%;
+    max-width: 710px; } }
+
+@media (min-width: 1200px) {
+  .portfolio_lots-of-images {
+    min-height: 2400px; }
+  .portfolio_lots-of-images .wp-image-3333 {
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 299px; }
+  .portfolio_lots-of-images .wp-image-3335 {
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    left: 324px;
+    width: 100%;
+    max-width: 263px; }
+  .portfolio_lots-of-images .wp-image-3337 {
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    left: 613px;
+    width: 100%;
+    max-width: 535px; }
+  .portfolio_lots-of-images .wp-image-3343 {
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 444px;
+    left: 0;
+    width: 100%;
+    max-width: 405px; }
+  .portfolio_lots-of-images .wp-image-3339 {
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 385px;
+    left: 431px;
+    width: 100%;
+    max-width: 274px; }
+  .portfolio_lots-of-images .wp-image-3361 {
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 385px;
+    left: 733px;
+    width: 100%;
+    max-width: 416px; }
+  .portfolio_lots-of-images .wp-image-3345 {
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 736px;
+    left: 0;
+    width: 100%;
+    max-width: 706px; }
+  .portfolio_lots-of-images .wp-image-3347 {
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 1100px;
+    left: 734px;
+    width: 100%;
+    max-width: 416px; }
+  .portfolio_lots-of-images .wp-image-3349 {
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 1350px;
+    left: 0;
+    width: 100%;
+    max-width: 209px; }
+  .portfolio_lots-of-images .wp-image-3351 {
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 1350px;
+    left: 230px;
+    width: 100%;
+    max-width: 921px; }
+  .portfolio_lots-of-images .wp-image-3353 {
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 1980px;
+    left: 0; }
+  .portfolio_lots-of-images .wp-image-3355 {
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 1980px;
+    left: 587px;
+    width: 100%;
+    max-width: 565px; }
+  .portfolio_lots-of-images .wp-image-3357 {
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 1980px;
+    left: 0;
+    width: 100%;
+    max-width: 565px; } }
+
+/* * * * * * * * * * * * * * * * * * * * * * * 
 /* Mobile-landscape (and smaller)
 * * * * * * * * * * * * * * * * * * * * * * */
 @media (max-width: 768px) {
