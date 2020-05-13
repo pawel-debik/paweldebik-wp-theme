@@ -30,8 +30,9 @@ body { background: white; font: 18px/2.3 "Estedad"; }
     VARS 
 * * * * * * * * * * * * * * * * * * * * * * */
 
-:root { --blue-1: #4dbeff; }
-:root { --blue-2: rgba(0, 144, 255, 0); } 
+:root { --blue-1: #4dbeff; } // Mostly for text. Ok contrast for both light and dark theme
+:root { --blue-2: #1aabff; } // Mostly for small text, like links
+:root { --blue-3: rgba(0, 144, 255, 0); } 
 
 
 /* * * * * * * * * * * * * * * * * * * * * * * 
@@ -52,7 +53,7 @@ p::selection, a::selection, span::selection, strong::selection, small::selection
 h1 { margin-bottom: 5px; }
 h2 { display: inline; color:white; padding: 9px 0; } 
 h3 { line-height:46px; font-size:20px; line-height:46px; }
-a { color: var(--blue-1); }
+a { color: var(--blue-2); }
 a:hover { color: #86d3ff; cursor: pointer; }
 .large-text-wrapper { display: block; }
 div p.large-text { font-size: 43px; line-height: 72px; color: var(--blue-1); font-family: Brygada; }
@@ -186,7 +187,7 @@ a h2::before, h2 span::before { content:""; }
 .subhome-item .button,
 .nav .menu-item span::before { transition: width .5s cubic-bezier(0, 1, 0.5, 1);
 }
-.subhome-item .button { position: absolute; top: 10px; right: -16px; background: rgba(255,255,255,0); color: var(--blue-2); font-size: 26px; text-align: center; z-index: 100; }
+.subhome-item .button { position: absolute; top: 10px; right: -16px; background: rgba(255,255,255,0); color: var(--blue-3); font-size: 26px; text-align: center; z-index: 100; }
 .photography-related { display: inline-block; }
 .photography-item { overflow: hidden; }
 .blog-item a,
