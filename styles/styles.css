@@ -937,7 +937,8 @@ html[xmlns] .clearfix {
 * * * * * * * * * * * * * * * * * * * * * * */
 .interactive-image {
   position: relative;
-  display: block; }
+  display: block;
+  text-decoration: none; }
 
 a.interactive-image::before {
   content: "more\a →";
@@ -982,7 +983,7 @@ a.interactive-image:hover::after {
 /* * * * * * * * * * * * * * * * * * * * * * * 
 	Exif
 * * * * * * * * * * * * * * * * * * * * * * */
-.entry .masonry > a .exif-container {
+.exif-container {
   position: relative;
   display: -webkit-box;
   display: flex;
