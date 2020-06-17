@@ -12,6 +12,12 @@ var myLazyLoad = new LazyLoad({
 /* Get image exif data */
 /* * * * * * * * * * * * * * * * * * * * * */
 
+/*
+TO DO
+- make ALL exif data go away on hover out
+- on hover in the animation doesn't play. That should be fixed.
+*/
+
 document.addEventListener('mouseenter', function(e){
     if (e.target.nodeName.toLowerCase() === "a") {
 		if (e.target.childNodes[0].classList.contains('show-exif')){

@@ -13,11 +13,6 @@ function load_javascript(){
 		wp_dequeue_script('jquery');
 		wp_deregister_script('jquery');
 
-
-		// jquery
-		// wp_register_script('jquery', "https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js", false, '3.0.0', true);
-		// wp_enqueue_script('jquery');
-
 		// Lazyload with jquery dependency
 		/*
 		wp_register_script('lazyload', get_bloginfo('template_directory') . '/js/lazyload.jq.min.js', '', '1.0', true);
@@ -36,17 +31,19 @@ function load_javascript(){
 		wp_enqueue_script('all');
 
 		// Make a variable available in javascript (in this case, the template directory - so that fetch() in js can find the right php file that's in the template)
-		wp_localize_script('all', 'wp_localize_vars', array('get_template_directory_uri' => get_template_directory_uri(),)
-		);
-
-		// wp_register_script('cssrefresh', get_bloginfo('template_directory') . '/js/cssrefresh.js', array('actions'), '1.0');
-		// wp_enqueue_script('cssrefresh');
+		wp_localize_script('all', 'wp_localize_vars', array('get_template_directory_uri' => get_template_directory_uri(),));
 
 		wp_enqueue_style( 'styles', get_stylesheet_directory_uri().'/styles/styles.css', array(), filemtime( get_stylesheet_directory().'/styles/styles.css' ));
 	}
 }
 
-add_action('init', 'load_javascript');
+add_action('wp_enqueue_scripts', 'load_javascript');
+
+function add_to_header() {
+	add_theme_support('title-tag');
+}
+
+add_action('after_setup_theme', 'add_to_header');
 
 
 // Clean up some scripts

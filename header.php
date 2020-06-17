@@ -1,12 +1,9 @@
 <?php _setcookies(); ?>
-<?php 
-$next = get_next_post_link('<span class="menu-next">%link</span>', 'Next Blog>', TRUE);
-$prev = get_previous_post_link('<span class="menu-prev">%link</span>', '< Prev', TRUE);
- ?>
+<?php $next = get_next_post_link('<span class="menu-next">%link</span>', 'Next Blog>', TRUE); ?>
+<?php $prev = get_previous_post_link('<span class="menu-prev">%link</span>', '< Prev', TRUE); ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-	<title><?php echo pageTitle(); ?></title>	
 	<meta name="description" content="Pawel Debik Web Design and Web Development Portfolio and Blog" />
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 	<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0" />
