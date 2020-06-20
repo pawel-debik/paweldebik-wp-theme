@@ -102,6 +102,25 @@ function appendExif(exif_data, e){
 
 
 /* * * * * * * * * * * * * * * * * * * * * */
+/* NASA API TEST */
+/* * * * * * * * * * * * * * * * * * * * * */
+
+fetch('https://api.nasa.gov/planetary/apod?api_key=E2QUmp7eZkd3CYELVTHulvqCP3qmlQ2pzjRK4Ssy')
+    .then( response => response.text())
+    .then( text => {
+		obj = JSON.parse(text);
+		const fullImageBg = document.querySelector('.full-image-div');
+		const newImageBg = document.createElement('div');
+		newImageBg.style.backgroundImage = `url(${obj.url})`;
+		newImageBg.classList.add('new-bg-img');
+		newImageBg.classList.add('faded');
+		document.body.insertBefore(newImageBg, fullImageBg);
+		newImageBg.classList.add('fade-in');
+	})
+	
+	
+
+/* * * * * * * * * * * * * * * * * * * * * */
 /* Pawel Lightbox */
 /* * * * * * * * * * * * * * * * * * * * * */
 

@@ -48,6 +48,8 @@ p::selection, a::selection, span::selection, strong::selection, small::selection
 .alignleft, .f-left { float: left; }
 .f-left { padding-right: 5px !important; }
 .hidden { display: none; }
+.faded { opacity: 0; transition: opacity 10s linear; }
+.fade-in { opacity: 1; }
 
 .page-wrap h2, .page-wrap h3 { font-weight: normal; margin: 0 0 10px 0; font: 26px/1.2 Brygada; }
 h1 { margin-bottom: 5px; }
@@ -226,6 +228,9 @@ a h2::before, h2 span::before { content:""; }
 footer { min-height: 35px; display: grid; width: 100%; background: none repeat scroll 0 0 rgba(34, 34, 34, 0.9); position: relative; z-index: 1; }
 footer .page-wrap { margin-bottom: 10px; }
 footer .toggle-label { color: #fff; }
+
+/* New Image */
+.new-bg-img { width: 100vw; height: 100vh; position: fixed; top: 0; z-index: 1; left: 0; }
 
 
 /* * * * * * * * * * * * * * * * * * * * * * * 

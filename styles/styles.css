@@ -84,6 +84,14 @@ p::selection, a::selection, span::selection, strong::selection, small::selection
 .hidden {
   display: none; }
 
+.faded {
+  opacity: 0;
+  -webkit-transition: opacity 10s linear;
+  transition: opacity 10s linear; }
+
+.fade-in {
+  opacity: 1; }
+
 .page-wrap h2, .page-wrap h3 {
   font-weight: normal;
   margin: 0 0 10px 0;
@@ -655,6 +663,15 @@ footer .page-wrap {
 
 footer .toggle-label {
   color: #fff; }
+
+/* New Image */
+.new-bg-img {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  left: 0; }
 
 /* * * * * * * * * * * * * * * * * * * * * * * 
     Clearfix
