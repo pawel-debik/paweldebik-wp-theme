@@ -11,7 +11,7 @@
 
 				$category = get_the_category();
 
-				if ($category[0]->name != "Blog"):
+				if ( has_post_thumbnail() ):
 					$gallery[$i]['id'] = get_the_ID();
 					$gallery[$i]['category_name'] = $category;
 					$gallery[$i]['permalink'] = get_permalink();
