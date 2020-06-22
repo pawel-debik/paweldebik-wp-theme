@@ -16,17 +16,14 @@
 					$gallery[$i]['category_name'] = $category;
 					$gallery[$i]['permalink'] = get_permalink();
 					$gallery[$i]['title'] = get_the_title();
+					$gallery[$i]['thumbnail_source'] = get_the_post_thumbnail_url(get_the_ID(), array( 450,200 ));
 					$gallery[$i]['thumbnail'] = get_the_post_thumbnail(get_the_ID(), array( 450,200 ), array( 'class' => 'photography-thumb' ));
 					$gallery[$i]['content'] = get_the_content();
 				endif;
 
 				if ($category[0]->name == "Blog"):
-					$review[$i]['id'] = get_the_ID();
-					$review[$i]['category_name'] = $category;
 					$review[$i]['permalink'] = get_permalink();
 					$review[$i]['title'] = get_the_title();
-					$review[$i]['thumbnail'] = get_the_post_thumbnail(get_the_ID(), array( 450,200 ), array( 'class' => 'photography-thumb' ));
-					$review[$i]['content'] = get_the_content();
 				endif;
 			?>
 
@@ -35,12 +32,11 @@
 
 
 		<div class="photography-galleries">
-		<?php foreach ($gallery as $key => $value): ?>
-			<div class="photography-item subhome-item" id="post-<?php $value['id']; ?>">
-				<a href="<?php echo $value['permalink']; ?>">
-					<h2><span><?php echo $value['title']; ?></span></h2>
-					<?php echo $value['thumbnail']; ?>
-					<span class="button round">></span>
+		<?php foreach ($gallery as $key => $v): ?>
+			<div class="photography-item photography-item" id="post-<?php $v['id']; ?>">
+				<a href="<?php echo $v['permalink']; ?>" class="js-interactive-image">
+					<?php // echo $v['thumbnail']; ?>
+					<?php echo '<img src="' . $v['thumbnail_source'] . '" alt="' . $v['title'] . '" class="photography-thumb"/>'; ?>
 				</a>
 			</div>
 			<?php endforeach; ?>
@@ -76,7 +72,7 @@
 		<?php while ($mypost->have_posts()) : $mypost->the_post(); ?>
 		<?php $category = get_the_category(); ?>
 			<?php if ($category[0]->name != "Blog"): ?>
-				<div class="photography-item subhome-item" id="post-<?php the_ID(); ?>">
+				<div class="photography-item photography-item" id="post-<?php the_ID(); ?>">
 					<a href="<?php echo get_permalink(); ?>">
 						<h2><span><?php the_title(); ?></span></h2>
 						<?php the_post_thumbnail(array( 450,200 ), array( 'class' => 'alignleft' )); ?>

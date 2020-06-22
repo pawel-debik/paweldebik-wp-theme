@@ -9,6 +9,56 @@ var myLazyLoad = new LazyLoad({
 
 
 /* * * * * * * * * * * * * * * * * * * * * */
+/* Change text of photography items hover */
+/* * * * * * * * * * * * * * * * * * * * * */
+const photographyItems = document.querySelectorAll('.js-interactive-image');
+for (i = 0; i < photographyItems.length; ++i) {
+	const item = photographyItems[i];
+	
+	item.addEventListener('mouseenter', function (e) {
+		const textContainer = document.createElement('div');
+		const textParagraph = document.createElement('p');
+		const textParagraph2 = document.createElement('p');
+		const text1 = document.createTextNode(e.target.getElementsByTagName('img')[0].alt);
+		const text2 = document.createTextNode('→');
+
+		// add text and style
+		textParagraph.appendChild(text1);
+		textParagraph2.appendChild(text2);
+		textContainer.classList.add('js-interactive-text');
+		textContainer.appendChild(textParagraph);
+		textContainer.appendChild(textParagraph2);
+
+		setTimeout(function(){
+			textContainer.classList.add('active');
+		}, 10);
+		
+		e.target.appendChild(textContainer);
+	});
+
+	item.addEventListener('mouseout', function (e) {
+		const texts = document.querySelectorAll('.js-interactive-text');
+		
+		for (i = 0; i < texts.length; ++i) {
+			texts[i].classList.add('deactivate');
+			texts[i].parentElement.classList.remove('active');
+		}
+
+		setTimeout(function(){		
+			for (i = 0; i < texts.length; ++i) {
+				texts[i].remove();
+			}
+		}, 200);
+
+	});
+}
+
+
+
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * */
 /* Get image exif data */
 /* * * * * * * * * * * * * * * * * * * * * */
 
@@ -20,15 +70,17 @@ TO DO
 
 document.addEventListener('mouseenter', function(e){
     if (e.target.nodeName.toLowerCase() === "a") {
-		if (e.target.childNodes[0].classList.contains('show-exif')){
-			const img_src = e.target.childNodes[0].getAttribute("src");
+		if (e.target.childNodes[0].classList) {
+			if (e.target.childNodes[0].classList.contains('show-exif')){
+				const img_src = e.target.childNodes[0].getAttribute("src");
 
-			if (!('fetch' in window)) {
-				console.log('no exif data for you');
-				return;
+				if (!('fetch' in window)) {
+					console.log('no exif data for you');
+					return;
+				}
+				
+				fetchExif(img_src, e.target.childNodes[0].parentElement);
 			}
-			
-			fetchExif(img_src, e.target.childNodes[0].parentElement);
 		}
 
 		e.target.classList.add('active');
