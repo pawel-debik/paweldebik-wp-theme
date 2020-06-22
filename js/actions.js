@@ -104,7 +104,7 @@ function appendExif(exif_data, e){
 /* * * * * * * * * * * * * * * * * * * * * */
 /* NASA API TEST */
 /* * * * * * * * * * * * * * * * * * * * * */
-
+/*
 fetch('https://api.nasa.gov/planetary/apod?api_key=E2QUmp7eZkd3CYELVTHulvqCP3qmlQ2pzjRK4Ssy')
     .then( response => response.text())
     .then( text => {
@@ -116,8 +116,8 @@ fetch('https://api.nasa.gov/planetary/apod?api_key=E2QUmp7eZkd3CYELVTHulvqCP3qml
 		newImageBg.classList.add('faded');
 		document.body.insertBefore(newImageBg, fullImageBg);
 		newImageBg.classList.add('fade-in');
-	})
-	
+	});
+*/
 	
 
 /* * * * * * * * * * * * * * * * * * * * * */
